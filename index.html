@@ -3,192 +3,211 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>אדמה – קרמיקה בעבודת יד</title>
-<meta name="description" content="דמו: דף נחיתה עם קטלוג מוצרים וטופס הזמנה">
+<title>KAKADU – הדפסי אמנות</title>
+<meta name="description" content="דמו: דף נחיתה עם קטלוג מוצרים, סינון, עגלה וטופס הזמנה">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;600;800&family=Frank+Ruhl+Libre:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&family=Frank+Ruhl+Libre:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bg:#f7f2ec;--card:#fffdf9;--ink:#2d241e;--muted:#7a6a5d;--clay:#b8643c;--clay-d:#94492a;
-  --sand:#e9dccd;--sage:#7d8c6a;--line:#e3d6c6;--shadow:0 10px 30px rgba(80,50,30,.10);
-}
+:root{--bg:#0f0f10;--panel:#17171a;--card:#1c1c20;--ink:#f4f1ea;--muted:#9c978d;--gold:#d8b46a;--gold-d:#b8924a;--line:#2a2a30}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:Heebo,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+body{font-family:Heebo,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
-.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
-.demo{background:var(--ink);color:#f3e9de;text-align:center;font-size:13px;padding:7px 16px}
-header{position:sticky;top:0;z-index:10;background:rgba(247,242,236,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{font-family:'Frank Ruhl Libre',serif;font-size:28px;font-weight:700;color:var(--clay-d);letter-spacing:.5px}
-.logo small{display:block;font-family:Heebo;font-size:11px;font-weight:400;color:var(--muted);letter-spacing:2px;margin-top:-6px}
-.links{display:flex;gap:28px;font-weight:600;font-size:15px}
-.links a:hover{color:var(--clay)}
-.btn{display:inline-block;background:var(--clay);color:#fff;font-weight:600;border:0;border-radius:999px;padding:12px 26px;font-size:16px;cursor:pointer;font-family:inherit;transition:.2s}
-.btn:hover{background:var(--clay-d);transform:translateY(-1px)}
-.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
-.btn.ghost:hover{background:var(--ink);color:#fff}
-.hero{padding:72px 0 56px;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
-.eyebrow{color:var(--sage);font-weight:600;letter-spacing:1px;font-size:14px}
-h1{font-family:'Frank Ruhl Libre',serif;font-size:clamp(36px,5.5vw,60px);line-height:1.1;margin:12px 0 18px}
-h1 em{font-style:normal;color:var(--clay)}
-.lead{font-size:18px;color:var(--muted);max-width:480px;margin-bottom:28px}
-.cta{display:flex;gap:12px;flex-wrap:wrap}
-.trust{display:flex;gap:28px;margin-top:36px;flex-wrap:wrap}
-.trust b{display:block;font-size:24px;color:var(--ink)}
-.trust span{font-size:13px;color:var(--muted)}
-.hero-art{position:relative;aspect-ratio:1/1;border-radius:46% 54% 50% 50%/55% 45% 55% 45%;background:radial-gradient(circle at 30% 30%,#f1e3d3,#dcc3a8);box-shadow:var(--shadow);display:grid;place-items:center;overflow:hidden}
-.hero-art svg{width:78%}
-.badge{position:absolute;bottom:8%;left:2%;background:var(--card);border-radius:16px;padding:12px 16px;box-shadow:var(--shadow);font-size:14px;font-weight:600}
-.badge span{color:var(--sage)}
-section{padding:64px 0}
-.head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:28px;flex-wrap:wrap}
-h2{font-family:'Frank Ruhl Libre',serif;font-size:clamp(28px,4vw,40px);line-height:1.15}
+img{display:block;max-width:100%}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+.demo{background:var(--gold);color:#1a1408;text-align:center;font-size:13px;font-weight:500;padding:6px 16px}
+header{position:absolute;top:31px;inset-inline:0;z-index:10}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{font-family:'Frank Ruhl Libre',serif;font-weight:900;font-size:26px;letter-spacing:6px}
+.logo span{color:var(--gold)}
+.links{display:flex;gap:32px;font-size:15px;font-weight:500}
+.links a{opacity:.85}.links a:hover{opacity:1;color:var(--gold)}
+.cartbtn{position:relative;border:1px solid #ffffff40;border-radius:999px;padding:9px 18px;font-size:14px;font-weight:500;background:#0006;backdrop-filter:blur(8px)}
+.cartbtn b{display:inline-grid;place-items:center;min-width:20px;height:20px;border-radius:10px;background:var(--gold);color:#111;font-size:12px;margin-inline-start:6px}
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;transform:scale(1.04);animation:zoom 14s ease-out forwards}
+@keyframes zoom{to{transform:scale(1)}}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#0f0f1055 0%,#0f0f1000 35%,#0f0f10cc 78%,#0f0f10 100%)}
+.hero .wrap{position:relative;z-index:2;padding-bottom:64px;width:100%}
+.eyebrow{color:var(--gold);letter-spacing:3px;font-size:13px;font-weight:700}
+h1{font-family:'Frank Ruhl Libre',serif;font-weight:900;font-size:clamp(40px,7vw,88px);line-height:1;margin:14px 0 18px}
+h1 em{font-style:normal;color:var(--gold)}
+.lead{font-size:clamp(16px,2vw,19px);color:#d9d4ca;max-width:520px;margin-bottom:28px}
+.btn{display:inline-block;background:var(--gold);color:#16120a;font-weight:700;border:0;border-radius:999px;padding:14px 30px;font-size:16px;cursor:pointer;font-family:inherit;transition:.2s}
+.btn:hover{background:#e9c87f;transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid #ffffff55;margin-inline-start:10px}
+.btn.ghost:hover{border-color:var(--gold);color:var(--gold)}
+.stats{display:flex;gap:40px;margin-top:40px;flex-wrap:wrap}
+.stats b{display:block;font-size:26px;font-weight:900}
+.stats span{font-size:13px;color:var(--muted)}
+section{padding:90px 0}
+.head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:34px;flex-wrap:wrap}
+h2{font-family:'Frank Ruhl Libre',serif;font-weight:700;font-size:clamp(30px,4.5vw,48px);line-height:1.1}
 .sub{color:var(--muted)}
 .filters{display:flex;gap:8px;flex-wrap:wrap}
-.chip{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:7px 16px;font-size:14px;cursor:pointer;font-family:inherit;color:var(--ink)}
-.chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.card{background:var(--card);border-radius:20px;overflow:hidden;border:1px solid var(--line);transition:.25s;display:flex;flex-direction:column}
-.card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
-.thumb{aspect-ratio:4/3;display:grid;place-items:center}
-.thumb svg{width:58%;height:auto}
-.info{padding:16px 18px 18px;display:flex;flex-direction:column;gap:4px;flex:1}
-.info h3{font-size:18px}
+.chip{border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:8px 18px;font-size:14px;cursor:pointer;font-family:inherit;color:var(--ink);transition:.2s}
+.chip:hover{border-color:var(--gold)}
+.chip.on{background:var(--ink);color:#111;border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.card{background:var(--card);border-radius:18px;overflow:hidden;border:1px solid var(--line);transition:.3s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-6px);border-color:#d8b46a66;box-shadow:0 20px 40px #0008}
+.ph{position:relative;aspect-ratio:4/5;overflow:hidden;background:#222}
+.ph img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.card:hover .ph img{transform:scale(1.06)}
+.lbl{position:absolute;top:12px;inset-inline-start:12px;background:#0f0f10cc;backdrop-filter:blur(6px);border-radius:999px;padding:4px 12px;font-size:12px;color:var(--gold);font-weight:700}
+.info{padding:18px 20px 20px;display:flex;flex-direction:column;gap:4px;flex:1}
+.info h3{font-size:19px;font-weight:700}
 .info p{font-size:14px;color:var(--muted);flex:1}
-.row{display:flex;justify-content:space-between;align-items:center;margin-top:10px}
-.price{font-weight:800;font-size:19px}
-.add{background:var(--sand);border:0;border-radius:999px;padding:8px 16px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--ink);transition:.2s}
-.add:hover,.add.done{background:var(--sage);color:#fff}
-.tag{display:inline-block;font-size:12px;color:var(--clay-d);font-weight:600}
-.why{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.features{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:28px}
-.f{padding:6px}
-.f .ic{width:48px;height:48px;border-radius:14px;background:var(--sand);display:grid;place-items:center;font-size:22px;margin-bottom:12px}
+.sizes{display:flex;gap:6px;margin-top:10px}
+.sz{border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:8px;padding:4px 10px;font-size:13px;cursor:pointer;font-family:inherit}
+.sz.on{border-color:var(--gold);color:var(--gold)}
+.row{display:flex;justify-content:space-between;align-items:center;margin-top:14px}
+.price{font-weight:900;font-size:22px}
+.add{background:var(--ink);color:#111;border:0;border-radius:999px;padding:9px 18px;font-weight:700;cursor:pointer;font-family:inherit;transition:.2s}
+.add:hover{background:var(--gold)}
+.add.done{background:var(--gold)}
+.band{background:var(--panel);border-block:1px solid var(--line)}
+.features{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:34px}
+.f .ic{width:52px;height:52px;border-radius:14px;border:1px solid #d8b46a55;color:var(--gold);display:grid;place-items:center;font-size:22px;margin-bottom:14px}
 .f h4{font-size:17px;margin-bottom:4px}
 .f p{font-size:14px;color:var(--muted)}
-.order{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
-form{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:28px;box-shadow:var(--shadow);display:grid;gap:14px}
-label{font-size:14px;font-weight:600;display:grid;gap:6px}
-input,select,textarea{font-family:inherit;font-size:16px;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:#fff;color:var(--ink)}
-input:focus,select:focus,textarea:focus{outline:2px solid var(--clay);border-color:transparent}
-.cart{font-size:14px;color:var(--muted);background:var(--bg);border-radius:12px;padding:10px 14px}
-.ok{display:none;text-align:center;padding:30px 10px}
-.ok b{font-size:22px;display:block;margin-bottom:6px}
-.steps{display:grid;gap:16px;margin-top:22px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.split img{border-radius:22px;aspect-ratio:4/5;object-fit:cover;width:100%}
+.quote{font-family:'Frank Ruhl Libre',serif;font-size:clamp(22px,2.6vw,30px);line-height:1.4;margin:18px 0}
+.who{color:var(--gold);font-weight:700}
+.order{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:start}
+form{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:30px;display:grid;gap:14px}
+label{font-size:14px;font-weight:500;display:grid;gap:6px;color:#d9d4ca}
+input,select,textarea{font-family:inherit;font-size:16px;padding:13px 15px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--gold);border-color:transparent}
+.cart{font-size:14px;color:var(--muted);background:var(--bg);border:1px dashed var(--line);border-radius:12px;padding:12px 15px}
+.cart b{color:var(--gold)}
+.ok{display:none;text-align:center;padding:36px 10px}
+.ok b{font-size:24px;display:block;margin-bottom:8px;color:var(--gold)}
+.steps{display:grid;gap:18px;margin-top:26px}
 .step{display:flex;gap:14px;align-items:flex-start}
-.step i{font-style:normal;min-width:34px;height:34px;border-radius:50%;background:var(--clay);color:#fff;display:grid;place-items:center;font-weight:800}
-footer{padding:36px 0;color:var(--muted);font-size:14px;text-align:center}
-.fab{position:fixed;bottom:18px;left:18px;width:56px;height:56px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:var(--shadow);font-size:26px;z-index:20}
-@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.features{grid-template-columns:repeat(2,1fr)}}
+.step i{font-style:normal;min-width:36px;height:36px;border-radius:50%;border:1px solid var(--gold);color:var(--gold);display:grid;place-items:center;font-weight:900}
+footer{padding:40px 0;color:var(--muted);font-size:14px;text-align:center;border-top:1px solid var(--line)}
+.fab{position:fixed;bottom:18px;left:18px;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 24px #0008;z-index:20}
+.fab svg{width:30px;fill:#fff}
+.toast{position:fixed;bottom:24px;left:50%;transform:translate(-50%,120px);background:var(--ink);color:#111;padding:12px 22px;border-radius:999px;font-weight:700;transition:.35s;z-index:30}
+.toast.show{transform:translate(-50%,0)}
+.reveal{opacity:0;transform:translateY(24px);transition:.8s}
+.reveal.in{opacity:1;transform:none}
+@media(max-width:960px){.grid{grid-template-columns:repeat(2,1fr)}.features{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:720px){
-  .links{display:none}.hero{grid-template-columns:1fr;padding:40px 0;gap:32px}.hero-art{max-width:360px;margin:0 auto;width:100%}
-  .order{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr;gap:12px}.info{padding:12px}.info h3{font-size:15px}.info p{display:none}
-  .add{padding:7px 12px;font-size:13px}.price{font-size:16px}section{padding:44px 0}
+  .links{display:none}.hero .wrap{padding-bottom:40px}.btn.ghost{margin:10px 0 0}
+  .split,.order{grid-template-columns:1fr;gap:28px}section{padding:60px 0}
+  .grid{gap:14px}.info{padding:12px 14px 14px}.info h3{font-size:16px}.info p{display:none}.price{font-size:18px}.add{padding:8px 13px;font-size:13px}
+  .stats{gap:24px}
 }
-@media(max-width:380px){.grid{grid-template-columns:1fr}}
+@media(max-width:420px){.grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<div class="demo">דף לדוגמה – עסק בדיוני · עוצב ונבנה בעזרת בינה מלאכותית</div>
+<div class="demo">דף לדוגמה · עסק בדיוני · התמונות נוצרו בבינה מלאכותית</div>
 <header><div class="wrap nav">
-  <a class="logo" href="#">אדמה<small>CERAMICS STUDIO</small></a>
+  <a class="logo" href="#">KAKA<span>DU</span></a>
   <nav class="links"><a href="#catalog">קטלוג</a><a href="#why">למה אנחנו</a><a href="#order">הזמנה</a></nav>
-  <a class="btn" href="#order">להזמנה</a>
+  <a class="cartbtn" href="#order">ההזמנה שלי<b id="count">0</b></a>
 </div></header>
 
-<main>
-<div class="wrap hero">
-  <div>
-    <div class="eyebrow">סטודיו לקרמיקה · תל אביב</div>
-    <h1>כלים שנוצרו <em>בידיים</em>,<br>לשולחן שמספר סיפור</h1>
-    <p class="lead">ספלים, קערות ואגרטלים בעבודת יד, בגלזורות טבעיות. כל פריט ייחודי – אין שניים זהים.</p>
-    <div class="cta"><a class="btn" href="#catalog">לצפייה בקטלוג</a><a class="btn ghost" href="#order">הזמנה אישית</a></div>
-    <div class="trust"><div><b>1,200+</b><span>לקוחות מרוצים</span></div><div><b>4.9★</b><span>דירוג ממוצע</span></div><div><b>3 ימים</b><span>משלוח עד הבית</span></div></div>
-  </div>
-  <div class="hero-art">
-    <svg viewBox="0 0 200 200" aria-hidden="true">
-      <ellipse cx="100" cy="172" rx="70" ry="9" fill="#00000014"/>
-      <path d="M70 60 Q60 40 78 30 L122 30 Q140 40 130 60 Q160 95 140 140 Q130 168 100 168 Q70 168 60 140 Q40 95 70 60Z" fill="#b8643c"/>
-      <path d="M62 112 Q100 124 138 112 Q141 125 140 140 Q130 168 100 168 Q70 168 60 140 Q59 125 62 112Z" fill="#94492a"/>
-      <ellipse cx="100" cy="30" rx="22" ry="5" fill="#7a3a20"/>
-      <path d="M84 70 Q80 95 86 120" stroke="#ffffff40" stroke-width="5" fill="none" stroke-linecap="round"/>
-    </svg>
-    <div class="badge"><span>●</span> במלאי – נשלח מחר</div>
+<div class="hero">
+  <img src="img/hero.jpg" alt="קקדו לבן פורש כנפיים">
+  <div class="wrap">
+    <div class="eyebrow">הדפסי אמנות · מהדורה מוגבלת</div>
+    <h1>הקיר שלכם<br>ראוי ל<em>נוצות</em></h1>
+    <p class="lead">פורטרטים של קקדו לבן בסגנון סטודיו, מודפסים על נייר מוזיאוני ומגיעים ממוסגרים ומוכנים לתלייה.</p>
+    <a class="btn" href="#catalog">לקטלוג המלא</a><a class="btn ghost" href="#order">הזמנה אישית</a>
+    <div class="stats"><div><b>2,400+</b><span>הדפסים נמכרו</span></div><div><b>4.9★</b><span>דירוג לקוחות</span></div><div><b>חינם</b><span>משלוח עד הבית</span></div></div>
   </div>
 </div>
 
 <section id="catalog"><div class="wrap">
-  <div class="head">
-    <div><h2>הקטלוג שלנו</h2><p class="sub">בחרו פריטים – נחזור אליכם לאישור ההזמנה</p></div>
-    <div class="filters" id="filters">
-      <button class="chip on" data-f="all">הכול</button><button class="chip" data-f="cup">ספלים</button><button class="chip" data-f="bowl">קערות</button><button class="chip" data-f="deco">עיצוב</button>
-    </div>
+  <div class="head reveal">
+    <div><h2>הקולקציה</h2><p class="sub">בחרו הדפס וגודל – נאשר את ההזמנה בוואטסאפ</p></div>
+    <div class="filters" id="filters"><button class="chip on" data-f="all">הכול</button><button class="chip" data-f="calm">רגוע</button><button class="chip" data-f="crest">כרבולת</button><button class="chip" data-f="wings">כנפיים</button></div>
   </div>
   <div class="grid" id="grid"></div>
 </div></section>
 
-<section class="why" id="why"><div class="wrap">
-  <h2>למה אדמה?</h2>
+<section class="band" id="why"><div class="wrap">
+  <h2 class="reveal">למה KAKADU?</h2>
   <div class="features">
-    <div class="f"><div class="ic">✋</div><h4>עבודת יד</h4><p>כל כלי נזרק על האובניים ומעוצב בסטודיו שלנו.</p></div>
-    <div class="f"><div class="ic">🌿</div><h4>חומרים טבעיים</h4><p>גלזורות ללא עופרת, בטוחות למזון ולמדיח.</p></div>
-    <div class="f"><div class="ic">🚚</div><h4>משלוח מהיר</h4><p>אריזה מוגנת ומשלוח עד הבית תוך 3 ימי עסקים.</p></div>
-    <div class="f"><div class="ic">🎁</div><h4>אריזת מתנה</h4><p>אפשרות לאריזה מעוצבת וכרטיס ברכה אישי.</p></div>
+    <div class="f reveal"><div class="ic">◈</div><h4>נייר מוזיאוני</h4><p>הדפסת פיגמנט על נייר 310 גרם, עמידות של 100 שנה.</p></div>
+    <div class="f reveal"><div class="ic">▣</div><h4>מסגור בעבודת יד</h4><p>מסגרת עץ אלון או שחור מט, זכוכית אנטי-רפלקס.</p></div>
+    <div class="f reveal"><div class="ic">✦</div><h4>מהדורה ממוספרת</h4><p>כל הדפס חתום וממוספר, עם תעודת מקוריות.</p></div>
+    <div class="f reveal"><div class="ic">➜</div><h4>משלוח חינם</h4><p>אריזה מוגנת ומשלוח עד הבית תוך 3–5 ימי עסקים.</p></div>
   </div>
 </div></section>
 
-<section id="order"><div class="wrap order">
-  <div>
+<section><div class="wrap split">
+  <img class="reveal" src="img/p2.jpg" alt="קקדו עם כרבולת מורמת" loading="lazy">
+  <div class="reveal">
+    <div class="eyebrow">לקוחות מספרים</div>
+    <p class="quote">"ההדפס הפך למרכז הסלון. כל מי שנכנס שואל עליו – והאיכות פשוט מדהימה."</p>
+    <div class="who">נועה, תל אביב</div>
+    <p class="sub" style="margin-top:6px">הזמינה את "הכתר הלבן", 70×100</p>
+  </div>
+</div></section>
+
+<section class="band" id="order"><div class="wrap order">
+  <div class="reveal">
     <h2>להזמנה או לייעוץ</h2>
     <p class="sub">השאירו פרטים ונחזור אליכם עוד היום.</p>
     <div class="steps">
-      <div class="step"><i>1</i><div><b>בוחרים פריטים</b><br><span class="sub">מהקטלוג או בהזמנה אישית</span></div></div>
-      <div class="step"><i>2</i><div><b>מאשרים בוואטסאפ</b><br><span class="sub">צבע, כמות ומועד משלוח</span></div></div>
-      <div class="step"><i>3</i><div><b>מקבלים הביתה</b><br><span class="sub">ארוז בקפידה, מוכן למתנה</span></div></div>
+      <div class="step"><i>1</i><div><b>בוחרים הדפס וגודל</b><br><span class="sub">מהקולקציה או בהזמנה אישית</span></div></div>
+      <div class="step"><i>2</i><div><b>מאשרים בוואטסאפ</b><br><span class="sub">מסגרת, גודל ומועד משלוח</span></div></div>
+      <div class="step"><i>3</i><div><b>תולים על הקיר</b><br><span class="sub">ארוז בקפידה, מוכן לתלייה</span></div></div>
     </div>
   </div>
-  <form id="form" novalidate>
+  <form id="form" class="reveal" novalidate>
     <div id="fields" style="display:grid;gap:14px">
       <label>שם מלא<input name="name" required placeholder="איך קוראים לך?"></label>
       <label>טלפון<input name="phone" type="tel" required placeholder="050-0000000" inputmode="tel"></label>
-      <label>מה מעניין אותך?<select name="type"><option>הזמנה מהקטלוג</option><option>הזמנה אישית</option><option>מתנה לאירוע / לעסק</option></select></label>
-      <div class="cart" id="cart">עוד לא נבחרו פריטים מהקטלוג</div>
-      <label>הערות<textarea name="notes" rows="3" placeholder="צבע, כמות, תאריך..."></textarea></label>
-      <button class="btn" type="submit">שליחה</button>
+      <label>מסגרת<select name="frame"><option>עץ אלון טבעי</option><option>שחור מט</option><option>ללא מסגרת</option></select></label>
+      <div class="cart" id="cart">עוד לא נבחרו הדפסים מהקטלוג</div>
+      <label>הערות<textarea name="notes" rows="3" placeholder="מתנה? הקדשה? תאריך?"></textarea></label>
+      <button class="btn" type="submit">שליחת הזמנה</button>
     </div>
-    <div class="ok" id="ok"><b>תודה! 🎉</b>הפרטים התקבלו – נחזור אליך בקרוב.<br><small class="sub">(בדמו הטופס לא שולח נתונים – באתר אמיתי הפנייה מגיעה לגוגל שיטס / מייל / וואטסאפ)</small></div>
+    <div class="ok" id="ok"><b>תודה! ההזמנה התקבלה</b>נחזור אליך בוואטסאפ לאישור.<br><small class="sub">(בדמו הטופס לא שולח נתונים – באתר אמיתי הפנייה מגיעה לגוגל שיטס / מייל / וואטסאפ)</small></div>
   </form>
 </div></section>
-</main>
 
-<footer>אדמה – סטודיו לקרמיקה · דף לדוגמה בלבד, העסק בדיוני</footer>
-<a class="fab" href="#order" aria-label="וואטסאפ">✆</a>
+<footer>KAKADU – הדפסי אמנות · דף לדוגמה בלבד, העסק בדיוני</footer>
+<a class="fab" href="#order" aria-label="וואטסאפ"><svg viewBox="0 0 32 32"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6c-2 0-4-.6-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.7 8.7 0 0 1-4.3-3.8c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c2 .9 2.8 1 3.9.8a3.3 3.3 0 0 0 2.1-1.5 2.7 2.7 0 0 0 .2-1.5c-.1-.2-.3-.3-.7-.4z"/></svg></a>
+<div class="toast" id="toast"></div>
 
 <script>
 const P=[
- {n:'ספל "בוקר"',d:'ספל 350 מ"ל בגלזורת חול',p:89,c:'cup',bg:'#efe2d2',col:'#c98a5e',s:'cup'},
- {n:'ספל אספרסו',d:'זוג ספלונים בגימור מט',p:119,c:'cup',bg:'#e3e8dc',col:'#7d8c6a',s:'cup'},
- {n:'קערת סלט גדולה',d:'קוטר 28 ס"מ, גלזורת אוקיינוס',p:249,c:'bowl',bg:'#dfe6ea',col:'#4f7489',s:'bowl'},
- {n:'קערות "ארוחת בוקר"',d:'סט של 4 קערות קטנות',p:199,c:'bowl',bg:'#f1e3d3',col:'#b8643c',s:'bowl'},
- {n:'אגרטל "דיונה"',d:'גובה 24 ס"מ, טקסטורה גולמית',p:229,c:'deco',bg:'#ece4dc',col:'#94492a',s:'vase'},
- {n:'פמוט שולחני',d:'לנרות עבים, זוג',p:139,c:'deco',bg:'#e8e1d6',col:'#5d5146',s:'candle'}
+ {n:'השקט',d:'פורטרט חזיתי, מבט ישיר ורגוע',img:'p1',c:'calm',p:[290,490,790]},
+ {n:'הכתר הלבן',d:'כרבולת מורמת במלוא הדרה',img:'p2',c:'crest',p:[320,540,860]},
+ {n:'פרופיל',d:'קו מתאר נקי על רקע אפור',img:'p3',c:'calm',p:[290,490,790]},
+ {n:'הקריאה',d:'מקור פתוח – רגע של אופי',img:'p4',c:'calm',p:[290,490,790]},
+ {n:'שלושה רבעים',d:'כרבולת פרושה, תאורת סטודיו',img:'p5',c:'crest',p:[320,540,860]},
+ {n:'מעוף',d:'כנפיים פרושות מהצד',img:'p6',c:'wings',p:[350,590,920]}
 ];
-const shapes={
- cup:c=>`<svg viewBox="0 0 120 100"><ellipse cx="55" cy="90" rx="38" ry="5" fill="#0001"/><path d="M22 22h66v42a24 24 0 0 1-24 24H46a24 24 0 0 1-24-24z" fill="${c}"/><path d="M88 34h8a14 14 0 0 1 0 28h-8" stroke="${c}" stroke-width="8" fill="none"/><ellipse cx="55" cy="22" rx="33" ry="6" fill="#0002"/></svg>`,
- bowl:c=>`<svg viewBox="0 0 120 100"><ellipse cx="60" cy="88" rx="40" ry="5" fill="#0001"/><path d="M12 38h96a48 46 0 0 1-96 0z" fill="${c}"/><ellipse cx="60" cy="38" rx="48" ry="9" fill="#0002"/><path d="M30 52q30 14 60 0" stroke="#fff5" stroke-width="3" fill="none"/></svg>`,
- vase:c=>`<svg viewBox="0 0 120 120"><ellipse cx="60" cy="112" rx="30" ry="5" fill="#0001"/><path d="M48 14h24v14q24 20 18 54q-4 28-30 28t-30-28q-6-34 18-54z" fill="${c}"/><ellipse cx="60" cy="14" rx="12" ry="3" fill="#0003"/></svg>`,
- candle:c=>`<svg viewBox="0 0 120 110"><ellipse cx="60" cy="100" rx="44" ry="5" fill="#0001"/><rect x="24" y="62" width="30" height="36" rx="6" fill="${c}"/><rect x="66" y="50" width="30" height="48" rx="6" fill="${c}"/><rect x="31" y="40" width="16" height="24" rx="3" fill="#f6efe4"/><rect x="73" y="26" width="16" height="26" rx="3" fill="#f6efe4"/><path d="M39 30q5 6 0 10q-5-4 0-10zM81 16q5 6 0 10q-5-4 0-10z" fill="#f2a33a"/></svg>`
-};
-const cart=[];
+const SZ=['30×40','50×70','70×100'];const LBL={calm:'רגוע',crest:'כרבולת',wings:'כנפיים'};
+const sel=P.map(()=>0);const cart=[];
+const $=id=>document.getElementById(id);
 function render(f){
- document.getElementById('grid').innerHTML=P.map((x,i)=>(f==='all'||x.c===f)?`<div class="card"><div class="thumb" style="background:${x.bg}">${shapes[x.s](x.col)}</div><div class="info"><span class="tag">${{cup:'ספלים',bowl:'קערות',deco:'עיצוב'}[x.c]}</span><h3>${x.n}</h3><p>${x.d}</p><div class="row"><span class="price">₪${x.p}</span><button class="add${cart.includes(i)?' done':''}" data-i="${i}">${cart.includes(i)?'✓ נבחר':'+ להזמנה'}</button></div></div></div>`:'').join('');
+ $('grid').innerHTML=P.map((x,i)=>(f==='all'||x.c===f)?`<div class="card"><div class="ph"><img src="img/${x.img}.jpg" alt="${x.n}" loading="lazy"><span class="lbl">${LBL[x.c]}</span></div><div class="info"><h3>${x.n}</h3><p>${x.d}</p><div class="sizes">${SZ.map((s,k)=>`<button class="sz${sel[i]===k?' on':''}" data-i="${i}" data-k="${k}">${s}</button>`).join('')}</div><div class="row"><span class="price">₪${x.p[sel[i]]}</span><button class="add${cart.some(c=>c.i===i)?' done':''}" data-i="${i}">${cart.some(c=>c.i===i)?'✓ בהזמנה':'+ להזמנה'}</button></div></div></div>`:'').join('');
 }
+function updateCart(){
+ $('count').textContent=cart.length;const sum=cart.reduce((a,c)=>a+P[c.i].p[c.k],0);
+ $('cart').innerHTML=cart.length?`נבחרו: ${cart.map(c=>`${P[c.i].n} (${SZ[c.k]})`).join(' · ')}<br><b>סה"כ ₪${sum.toLocaleString()}</b> · משלוח חינם`:'עוד לא נבחרו הדפסים מהקטלוג';
+}
+function toast(t){const el=$('toast');el.textContent=t;el.classList.add('show');clearTimeout(el._t);el._t=setTimeout(()=>el.classList.remove('show'),1800)}
 render('all');
-document.getElementById('filters').onclick=e=>{const b=e.target.closest('.chip');if(!b)return;document.querySelectorAll('.chip').forEach(c=>c.classList.toggle('on',c===b));render(b.dataset.f)};
-document.getElementById('grid').onclick=e=>{const b=e.target.closest('.add');if(!b)return;const i=+b.dataset.i;const k=cart.indexOf(i);k<0?cart.push(i):cart.splice(k,1);render(document.querySelector('.chip.on').dataset.f);
- const sum=cart.reduce((a,i)=>a+P[i].p,0);document.getElementById('cart').innerHTML=cart.length?`נבחרו: ${cart.map(i=>P[i].n).join(', ')} · <b>סה"כ ₪${sum}</b>`:'עוד לא נבחרו פריטים מהקטלוג'};
-document.getElementById('form').onsubmit=e=>{e.preventDefault();const f=e.target;if(!f.name.value.trim()||!f.phone.value.trim()){(f.name.value.trim()?f.phone:f.name).focus();return}document.getElementById('fields').style.display='none';document.getElementById('ok').style.display='block'};
+$('filters').onclick=e=>{const b=e.target.closest('.chip');if(!b)return;document.querySelectorAll('.chip').forEach(c=>c.classList.toggle('on',c===b));render(b.dataset.f)};
+$('grid').onclick=e=>{
+ const cur=()=>document.querySelector('.chip.on').dataset.f;
+ const s=e.target.closest('.sz');if(s){const i=+s.dataset.i;sel[i]=+s.dataset.k;const c=cart.find(c=>c.i===i);if(c)c.k=sel[i];render(cur());updateCart();return}
+ const b=e.target.closest('.add');if(!b)return;const i=+b.dataset.i;const k=cart.findIndex(c=>c.i===i);
+ if(k<0){cart.push({i,k:sel[i]});toast(`"${P[i].n}" נוסף להזמנה`)}else cart.splice(k,1);render(cur());updateCart()};
+$('form').onsubmit=e=>{e.preventDefault();const f=e.target;if(!f.name.value.trim()||!f.phone.value.trim()){(f.name.value.trim()?f.phone:f.name).focus();return}$('fields').style.display='none';$('ok').style.display='block'};
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
 </body>
 </html>
